@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timing functions(setTimeout)</title>
+</head>
+<body>
+    <h1>Hello welcome to my repo</h1>
+    <button id="stop">stop</button>
+    <script>
+        // setTimeout function :-use for set a time for doing work
+        //syntax1:-
+        setTimeout(function(){
+            console.log("Ujjwal");
+            
+        },2000);// 2000 means 2 second
+
+        // syntax 2:-
+        const settime = function(){
+            console.log("this is another syntax for settimout");
+            
+        }
+         setTimeout(settime,2000)
+         //ex 1:-
+         const changeHeading = function(){
+            document.querySelector("h1").innerHTML = "hello welcome to my file";
+         };
+         const changeme = setTimeout(changeHeading,2000);
+
+         // how to stop setTimeout function before completed use clearTimeout()
+
+         //ex:- take refrence of above example
+         document.querySelector("#stop").addEventListener('click',function(){
+            clearTimeout(changeme); // here we take only refrence not execution
+            console.log("stopped");
+            
+         })
+
+         
+
+    </script>
+</body>
+</html>

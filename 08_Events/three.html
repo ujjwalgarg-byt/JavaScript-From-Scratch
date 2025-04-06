@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timing functions(setInterval)</title>
+</head>
+<body>
+    <h1>Hello welcome to my repo</h1>
+    <button id="stop">stop</button>
+    <button id="start">start</button>
+    <script>
+        // set Interval function :- use to set interval btw work
+        //syntax:-
+        // setInterval(function(){
+        //     console.log("ujjwal")
+            
+        // },2000)
+        // here ujjwal will be printed after 2 sec again and again
+        
+        // for stoping this use clearInterval like below
+
+        //ex:-
+        const change = setInterval(function(){
+            console.log("ujjwal",Date.now());
+            
+        },2000);
+        clearInterval(change)
+
+        //ex2:=
+        const changeH1= function(){
+            console.log('hello guys welcome to my file');
+            
+        }
+        let changeMe;
+        document.querySelector("#start").addEventListener('click',function(){
+            changeMe=setInterval(changeH1,2000);
+        })
+        document.querySelector("#stop").addEventListener('click',function(){
+            
+            clearInterval(changeMe)
+            console.log("stopped");
+            
+        })
+
+    </script>
+</body>
+</html>
