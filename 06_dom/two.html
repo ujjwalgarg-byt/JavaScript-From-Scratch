@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM | Parents & Childrens</title>
+</head>
+<body style="background-color: #212121; color: #fff;">
+    <div class="parent">
+        <div class="day">Monday</div>
+        <div class="day">Tuesday</div>
+        <div class="day">Wednesday</div>
+        <div class="day">Thursday</div>
+    </div>
+</body>
+<script>
+    const parent = document.querySelector('.parent')
+    console.log(parent);//return all the elements of parent class and div also
+    // console.log(parent.children);//return all elements or childeren of parent class in html collection
+    // console.log(parent.children[1].innerHTML); //Tuesday
+
+    // for (let i = 0; i < parent.children.length; i++) {
+    //      console.log(parent.children[i].innerHTML);
+        //return all the inner html of class day like monday,tuesday etc
+    // }
+
+    parent.children[1].style.color = "orange";//tuesday will be orange
+    // console.log(parent.firstElementChild); //return first child element monday
+    // console.log(parent.lastElementChild); //return last element child
+
+    const dayOne = document.querySelector('.day');//select monday
+    console.log(dayOne); //monday
+    // console.log(dayOne.parentElement); // return parent of monday which is parent class div
+    // console.log(dayOne.nextElementSibling);// Tuesday
+
+    console.log("NODES: ", parent.childNodes);//return all nodes of parent class
+</script>
+</html>
